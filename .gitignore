@@ -1,0 +1,3 @@
+.townenv/
+.env
+modules/messaging/users.json

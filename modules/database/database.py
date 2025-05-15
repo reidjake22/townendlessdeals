@@ -121,7 +121,7 @@ class Database:
             )
             
             price_history = [
-                {'price': row[0], 'discounted_price': row[1], 'timestamp': row[2]} 
+                {'item_price': row[0], 'item_discounted_price': row[1], 'timestamp': row[2]} 
                 for row in cursor.fetchall()
             ]
             
