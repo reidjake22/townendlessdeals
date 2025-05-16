@@ -45,14 +45,14 @@ def format_with_llm(relevant_item_lists: dict):
     4. At the end of the message highlighting some good discounts and items.
     5. Following the text element send a list of EVERY SINGLE ITEM with the following shape:
     A summary of all the deals is as follows:
-    midi-dress: $50 (was $100)
-    clutch-bag: $20 (was $40)
+    midi-dress: £50 (was £100)
+    clutch-bag: £20 (was £40)
     ...
     6. DO NOT DO AND MANY MORE - YOU ABSOLUTELY MUST LIST EVERY ITEM
-    7. capitalise & surround the clothes names with *TEXT* in the drop down list. GIVE EACH ITEM A RELEVANT EMOJI after the price description
+    7. capitalise the clothes names in the drop down list. GIVE EACH ITEM A RELEVANT EMOJI after the price description
     Format the following sale items into a friendly, 
-    concise WhatsApp message that highlights every deal available. The message should be personal, 
-    engaging, and mention all items by name and their prices and drops, use emojis where whatsapp formatting isnt sufficient.
+    concise sms message that highlights every deal available. The message should be personal, 
+    engaging, and mention all items by name and their prices and drops, use emojis whereever you like! Be fun.
 
     Here are the items on sale:
     {items_text}
