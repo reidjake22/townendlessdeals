@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 import os
 # Load environment variables from .env file
 
-load_dotenv()
+load_dotenv(override=True)
 account_sid = os.environ.get("ACCOUNT_SID")
 auth_token = os.environ.get("AUTH_TOKEN")
 twilio_number = os.environ.get("TWILIO_NUMBER")
