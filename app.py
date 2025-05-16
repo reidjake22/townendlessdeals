@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 # Load env vars
 load_dotenv(override=True)
-
+print("INITIAL BOOT UP *************************")
 app = Flask(__name__)
 scheduler_started = False
 
