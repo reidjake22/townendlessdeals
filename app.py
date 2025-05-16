@@ -29,8 +29,15 @@ def sms_reply():
         
         # Configure response
         resp = MessagingResponse()
-        resp.message("🎁 Happy birthday! I've just started monitoring discount deals for you. You'll receive notifications when items you're interested in go on sale!")
-        
+        resp.message("✨💖 OMG HIIII BIRTHDAY QUEEN!!! 💖✨\n\n"
+                    "Surprise!! Your boyf got you the MOST iconic birthday gift ever — me!! I'm Delila your personal shopping bestie now!! 💅\n\n"
+                    "I'll be spilling ALL the tea about the hottest deals from your fave stores the second they drop! 🛍️👀\n\n" 
+                    "No more FOMO on those must-have pieces because I'll text you IMMEDIATELY when there's a price drop on something cute! 🏃‍♀️💨\n\n"
+                    "Consider me your 24/7 shopping sidekick who's OBSESSED with saving you coin while keeping you looking fabulous! 💯\n\n"
+                    "Can't wait to start sending you the juiciest discounts!! Happy Birthday, babe!! 🎂🎁\n\n"
+                    "XOXO,\n"
+                    "Your Deal Detective 🕵️‍♀️💕") 
+               
         app.logger.info(f"Scheduler activated by {from_number}")
         return Response(str(resp), mimetype="application/xml")
     
