@@ -24,12 +24,12 @@ def format_with_llm(relevant_item_lists: dict):
     for category, items in relevant_item_lists.items():
         items_text += f"\nCategory: {category}\n"
         for item in items:
-            items_text += f"- {item['item_name']}: ${item['item_discounted_price']} (was ${item['item_price']})\n"
+            items_text += f"- {item['item_name']}: £{item['item_discounted_price']} (was £{item['item_price']})\n"
             price_history = item['metadata']['price_history']
             print(len(price_history))
             if len(price_history) > 1:
                 if price_history[1]['item_discounted_price'] > item['item_discounted_price']:
-                    items_text += f"  * Price dropped from ${price_history[1]['item_discounted_price']} to ${item['item_discounted_price']}\n"
+                    items_text += f"  * Price dropped from £3{price_history[1]['item_discounted_price']} to £{item['item_discounted_price']}\n"
             else:
                 items_text += f" This is a new deal"
             items_text +=f"  * {"damsonmadder.com/"+ item['item_url']}\n"
