@@ -27,21 +27,26 @@ def update_all_users(new_sale_items: dict) -> None:
         users = json.load(f)
     # users is a dictionary with user_name as key
     for user_name, user in users.items():
-        print(user_name)
-        print(user)
-        print(user['interests'])
         relevant_item_lists = generate_content(new_sale_items, user)
         if relevant_item_lists:
             send_message(relevant_item_lists, user)
 
 def send_message(relevant_item_lists: dict, user: dict) -> None:
-    """
-    This function is used to send a message to the user.
-    Split long messages intelligently if they exceed 1600 characters.
-    """
+    """Send a message to the user about new sale items"""
+    from ..conversations.manager import ConversationManager
+    
     print(f"Sending message to {user['name']}: {relevant_item_lists}")
     message_body = format_with_llm(relevant_item_lists)
     
+    # Store in conversation history
+    conversation_manager = ConversationManager()
+    conversation_manager.add_system_notification(
+        user['phone_number'], 
+        message_body, 
+        relevant_item_lists
+    )
+    
+    # Send via Twilio
     # Twilio credentials
     
     client = Client(account_sid, auth_token)
