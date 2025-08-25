@@ -1,6 +1,6 @@
 # TownendlessDiscounts
 
-TownendlessDiscounts was made as a gift for my lovely girlfriend - opensource project are the 21st century ballad.
+TownendlessDiscounts was made as a gift for my lovely girlfriend - opensource projects are the 21st century ballad.
 
 The idea is that you interact with a character called Delia Webster via SMS (currently).The server is a Python-based automated sale tracker and notification system for fashion websites. It monitors selected online stores for new sale items and price drops, then sends personalized SMS alerts to users using Twilio. The project is designed to help users never miss a deal on their favorite brands.
 
